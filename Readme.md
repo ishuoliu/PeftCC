@@ -21,6 +21,13 @@ Prompt / Prefix:
   source run_peft.sh
 ```
 
+Probing tasks:
+```commandline
+  cd ./just-in-time
+  python probe_extractor.py
+  python probe_classifier.py
+```
+
 - Commit Message Generation:
 
 Finetune / Adapter / LoRA:
@@ -33,4 +40,11 @@ Prompt / Prefix / Pasta:
 ```commandline
   cd ./commit-generation
   source run_peft.sh
+```
+
+Probing tasks:
+```commandline
+  cd ./commit-generation
+  python probe_extractor.py
+  python probe_classifier.py
 ```
