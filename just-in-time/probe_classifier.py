@@ -171,11 +171,9 @@ def classify_and_predict(train_X, train_y, dev_X, dev_y, test_X, test_y, feat_di
 
 
 def embed_classifier(args):
-    if args.task_code == "MAT":
+    if args.task_code == "CCM":
         text_dataset = f"../datasets/probing/fira_diff_nl_{args.data_size}.txt"
-    elif args.task_code == "MSK":
-        text_dataset = f"../datasets/probing/fira_msk_{args.data_size}.txt"
-    elif args.task_code == "MSK_2":
+    elif args.task_code == "LTP":
         text_dataset = f"../datasets/probing/fira_len_{args.data_size}.txt"
     else:
         text_dataset = f"../datasets/probing/datasets_{args.task_code}/{args.task_code}_ORIG_{args.data_size}.txt"
@@ -192,7 +190,7 @@ if __name__ == "__main__":
     args.device = device
 
 
-    args.task_code = "MSK_2"
+    args.task_code = "CCM"
     args.data_size = "1k"     # "100", "1k", "10k"
     for type in ["ft", "lora", "adapter"]:
         args.train_type = type     # "ft", "lora", "adapter"
